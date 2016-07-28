@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="target-densitydpi=device-dpi,width=640, user-scalable=no" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="css/animate.css"/>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/js.cookie.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/share.js"></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "//hm.baidu.com/hm.js?e737dbe24e253fcedd1cf25cbb9f05b9";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+
+		function trackBaidu(str){
+			_hmt.push(['_trackPageview', '/'+str]);
+		}
+
+		function trackBaiduEvent(category,action){
+			_hmt.push(['_trackEvent', category+action, action]);
+		}
+
+		//解析页面网址函数
+		function parseURL(url) {
+			var a =  document.createElement('a');
+			a.href = url;
+			return {
+				source: url,
+				protocol: a.protocol.replace(':',''),
+				host: a.hostname,
+				port: a.port,
+				query: a.search,
+				params: (function(){
+					var ret = {},
+							seg = a.search.replace(/^\?/,'').split('&'),
+							len = seg.length, i = 0, s;
+					for (;i<len;i++) {
+						if (!seg[i]) { continue; }
+						s = seg[i].split('=');
+						ret[s[0]] = s[1];
+					}
+					return ret;
+				})(),
+				file: (a.pathname.match(/\/([^\/?#]+)$/i) || [,''])[1],
+				hash: a.hash.replace('#',''),
+				path: a.pathname.replace(/^([^\/])/,'/$1'),
+				relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [,''])[1],
+				segments: a.pathname.replace(/^\//,'').split('/')
+			};
+		}
+		//通用函数结束  /////////////
+
+
+
+		//页面统计代码 开始  //////////////////////////////
+		var phase = '';  //网页所属部分，如果一个网站想分成几个部分来统计可以使用此变量区分
+
+		//hmsr代表媒体的种类，share代表分享的层级
+
+		//解析url
+		var hmsr,share;
+		var myURL = parseURL(location.href);
+		hmsr = myURL.params.hmsr;
+		share = parseInt(myURL.params.share,10);
+		if(!isNaN(share)){
+			share++;
+		}
+
+		//读取cookie
+		if(!hmsr){
+			hmsr = Cookies.get('hmsr')?Cookies.get('hmsr'):0;
+		}
+		if(!share){
+			share = Cookies.get('share')?parseInt(Cookies.get('share'),10):1;
+		}
+
+
+		//保存cookie，设置为当前目录当天有效
+		Cookies.set('hmsr', hmsr, { expires: 1, path: '' });
+		Cookies.set('share', share, { expires: 1, path: '' });
+
+		//生成监测的前缀
+		var media = phase+'_media_'+hmsr+'_';
+
+		//改变分享的链接
+		shareData.link = shareData2.link ='http://www.philips-campaign.com/shaver1602/index3.html?hmsr='+hmsr+'&share='+share;
+		//监测分享完成
+		shareData.success = shareData2.success = function (res) {
+			trackBaidu(media+'分享完成');
+		}
+	</script>
+</head>
+<body>
+<div class="main">
+	<img class="tips animated fadeOutUp" src="img/tips1.png" alt=""/>
+	<div class="a">
+		<img src="img/in3.jpg" alt=""/>
+	</div>
+	<div class="b">
+		<img src="img/p2.jpg" alt=""/>
+	</div>
+	<div class="c">
+		<img src="img/p3.jpg" alt=""/>
+	</div>
+	<div class="d">
+		<img src="img/p4_3.jpg" alt=""/>
+	</div>
+	<div class="e"></div>
+	<div class="f">
+		<div class="btn"><img src="img/btn.jpg" alt=""/></div>
+	</div>
+	<div class="footer">
+		<div class="baidun">
+			<img class="baidun_pic" src="img/shiyong/baidun.png" alt=""/>
+		</div>
+		<div class="philips">
+			<img class="ph_pic" src="img/shiyong/philips.png" alt=""/>
+		</div>
+		<div class="weibo">
+			<img class="weibo_lian" src="img/shiyong/weibo.png" alt=""/>
+		</div>
+		<div class="ch">
+			<img class="zhongwen" src="img/shiyong/zhongwen.png" alt=""/>
+		</div>
+		<div class="zhandian">
+			<img class="zhan" src="img/shiyong/zhandian.png" alt=""/>
+		</div>
+		<div class="kong"></div>
+		<div class="list">
+			<ul>
+				<li class="li_1">中国</li>
+				<li class="li_2">消费类产品</li>
+				<li class="li_3">专业类产品</li>
+				<li class="li_4">关于飞利浦</li>
+			</ul>
+		</div>
+		<div class="lianjie1">
+			<img class="q1" src="img/shiyong/q1.png" alt=""/>
+			<img class="q2" src="img/shiyong/q2.png" alt=""/>
+			<img class="q3" src="img/shiyong/q3.png" alt=""/>
+			<img class="q4" src="img/shiyong/q4.png" alt=""/>
+			<img class="q5" src="img/shiyong/q5.png" alt=""/>
+		</div>
+		<div class="lianjie2">
+			<img class="q6" src="img/shiyong/q6.png" alt=""/>
+			<img class="q7" src="img/shiyong/q7.png" alt=""/>
+			<img class="q8" src="img/shiyong/q8.png" alt=""/>
+			<img class="q9" src="img/shiyong/q9.png" alt=""/>
+		</div>
+		<div class="shuoming">
+			<img src="img/shiyong/q10.png" alt=""/>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function(){
+
+		$('.btn').click(function(){
+			//trackBaidu(media+'btn/申请试用');
+			trackBaiduEvent(media,'申请免费试用');
+			location.href = 'shiyong.html?hmsr='+hmsr;
+		})
+		$(window).scroll(function(){
+			if($('.footer').position().top < $(window).height() + $(document).scrollTop() ){
+				$('.f').css({'position':'absolute','top':$('.footer').position().top - $('.f').height() })
+			}else{
+				$('.f').css({'position':'fixed','top':'' })
+			}
+		})
+		$('.zhan').click(function(){
+
+			if($('.kong').is(":visible")){
+				$('.kong').hide();
+				$('.list').show();
+
+				return false;
+			}else if($('.list')){
+				$('.kong').show();
+				$('.list').hide();
+			}
+		})
+
+
+		$('.weibo_lian').click(function(){
+			location.href = 'http://weibo.com/u/1708272353';
+		})
+
+		$('.zhongwen').click(function(){
+			location.href = 'http://www.philips.com.cn/';
+		})
+
+		$('.li_1').click(function(){
+			location.href = 'http://www.philips.com.cn';
+		})
+
+		$('.li_2').click(function(){
+			location.href = 'http://www.philips.com.cn/c-m/consumer-products';
+		})
+
+		$('.li_3').click(function(){
+			location.href = 'http://www.philips.co.uk';
+		})
+
+		$('.li_4').click(function(){
+			location.href = 'http://www.philips.co.uk';
+		})
+
+		$('.q1').click(function(){
+			location.href = 'http://www.philips.com/a-w/about/investor.html';
+		})
+
+		$('.q2').click(function(){
+			location.href = 'http://www.philips.com.cn/a-w/careers.html';
+		})
+
+		$('.q3').click(function(){
+			location.href = 'http://www.philips.com.cn/c-w/support-home/support-contact-page.html';
+		})
+
+		$('.q4').click(function(){
+			location.href = 'http://www.philips.com.cn/a-w/site-owner.html';
+		})
+
+		$('.q5').click(function(){
+			location.href = 'http://www.philips.com.cn/a-w/privacy-notice.html';
+		})
+
+		$('.q6').click(function(){
+			location.href = 'http://www.philips.com.cn/a-w/terms-of-use.html';
+		})
+
+		$('.q7').click(function(){
+			location.href = 'http://www.philips.com.cn/a-w/security/responsible-disclosure-statement.html';
+		})
+
+		$('.q8').click(function(){
+			location.href = 'http://www.sitemap.philips.com/sitemap/cn_zh/';
+		})
+
+		$('.q9').click(function(){
+			location.href = 'http://www.sitemap.philips.com/sitemap/cn_zh/';
+		})
+
+	})
+</script>
+</body>
+</html>

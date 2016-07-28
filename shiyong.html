@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="target-densitydpi=device-dpi,width=640, user-scalable=no" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/js.cookie.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/share.js"></script>
+	<script>
+		// var _hmt = _hmt || [];
+		// (function() {
+		// 	var hm = document.createElement("script");
+		// 	hm.src = "//hm.baidu.com/hm.js?e737dbe24e253fcedd1cf25cbb9f05b9";
+		// 	var s = document.getElementsByTagName("script")[0];
+		// 	s.parentNode.insertBefore(hm, s);
+		// })();
+
+	</script>
+</head>
+<body>
+<div class="main">
+	<div class="header">
+		<img src="img/shiyong/header.jpg" alt=""/>
+	</div>
+	<div class="content">
+		<img src="img/shiyong/shi1.png" alt=""/>
+		<div class="name_box">
+			<img class="name_pic" src="img/shiyong/name.png" alt=""/>
+			<input class="name_ipt" type="text"/>
+		</div>
+		<div class="font_box">
+			<img class="moblie_pic" src="img/shiyong/moblie.png" alt=""/>
+			<input class="moblie_ipt" maxlength="11" type="text"/>
+		</div>
+		<div class="sex_box">
+			<img src="img/shiyong/sex.png" alt=""/>
+			<i class="active">男</i>
+			<i>女</i>
+		</div>
+		<div class="sixs_box">
+			<img src="img/shiyong/sixs.png" alt=""/>
+			<i>是</i>
+			<i>否</i>
+		</div>
+		<div class="dao_box">
+			<img src="img/shiyong/dao.png" alt=""/>
+			<i>是</i>
+			<i>否</i>
+		</div>
+		<div class="pifu_box">
+			<img src="img/shiyong/pifu.png" alt=""/>
+			<i>是</i>
+			<i>否</i>
+		</div>
+		<div class="age_box">
+			<img src="img/shiyong/age.png" alt=""/>
+			<i>26岁以下</i>
+			<i>26-33岁</i>
+			<i>34-40岁</i>
+			<i>40岁以上</i>
+		</div>
+		<div class="chengshi_box">
+			<img src="img/shiyong/chengshi.png" alt=""/>
+			<i>北京</i>
+			<i>上海</i>
+			<i>广州</i>
+			<i>深圳</i>
+			<i>其他</i>
+		</div>
+		<div class="declare_box">
+			<div class="mianze_box">
+				<span class="gou"></span>
+				<img class="mian_word" src="img/shiyong/mianword.png" alt=""/>
+			</div>
+			<img class="geren" src="img/shiyong/geren.png" alt=""/>
+			<img class="sub_btn" src="img/shiyong/button.png" alt=""/>
+		</div>
+	</div>
+	<div class="shengming">
+		<div class="sheng_t">
+			<img src="img/sheng/shang.jpg" alt=""/>
+		</div>
+		<div class="sheng_b">
+			<img src="img/sheng/xia.jpg" alt=""/>
+			<img class="back_btn" src="img/sheng/back_btn.png" alt=""/>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="baidun">
+			<img class="baidun_pic" src="img/shiyong/baidun.png" alt=""/>
+		</div>
+		<div class="philips">
+			<img class="ph_pic" src="img/shiyong/philips.png" alt=""/>
+		</div>
+		<div class="weibo">
+			<img class="weibo_lian" src="img/shiyong/weibo.png" alt=""/>
+		</div>
+		<div class="ch">
+			<img class="zhongwen" src="img/shiyong/zhongwen.png" alt=""/>
+		</div>
+		<div class="zhandian">
+			<img class="zhan" src="img/shiyong/zhandian.png" alt=""/>
+		</div>
+		<div class="kong"></div>
+		<div class="list">
+			<ul>
+				<li class="li_1">中国</li>
+				<li class="li_2">消费类产品</li>
+				<li class="li_3">专业类产品</li>
+				<li class="li_4">关于飞利浦</li>
+			</ul>
+		</div>
+		<div class="lianjie1">
+			<img class="q1" src="img/shiyong/q1.png" alt=""/>
+			<img class="q2" src="img/shiyong/q2.png" alt=""/>
+			<img class="q3" src="img/shiyong/q3.png" alt=""/>
+			<img class="q4" src="img/shiyong/q4.png" alt=""/>
+			<img class="q5" src="img/shiyong/q5.png" alt=""/>
+		</div>
+		<div class="lianjie2">
+			<img class="q6" src="img/shiyong/q6.png" alt=""/>
+			<img class="q7" src="img/shiyong/q7.png" alt=""/>
+			<img class="q8" src="img/shiyong/q8.png" alt=""/>
+			<img class="q9" src="img/shiyong/q9.png" alt=""/>
+		</div>
+		<div class="shuoming">
+			<img src="img/shiyong/q10.png" alt=""/>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+
+
+
+
+
+
+
+	// function trackBaidu(str){
+	// 	_hmt.push(['_trackPageview', '/'+str]);
+	// }
+
+	// function trackBaiduEvent(category,action){
+	// 	_hmt.push(['_trackEvent', category+action, action]);
+	// }
+
+	//解析页面网址函数
+	// function parseURL(url) {
+	// 	var a =  document.createElement('a');
+	// 	a.href = url;
+	// 	return {
+	// 		source: url,
+	// 		protocol: a.protocol.replace(':',''),
+	// 		host: a.hostname,
+	// 		port: a.port,
+	// 		query: a.search,
+	// 		params: (function(){
+	// 			var ret = {},
+	// 					seg = a.search.replace(/^\?/,'').split('&'),
+	// 					len = seg.length, i = 0, s;
+	// 			for (;i<len;i++) {
+	// 				if (!seg[i]) { continue; }
+	// 				s = seg[i].split('=');
+	// 				ret[s[0]] = s[1];
+	// 			}
+	// 			return ret;
+	// 		})(),
+	// 		file: (a.pathname.match(/\/([^\/?#]+)$/i) || [,''])[1],
+	// 		hash: a.hash.replace('#',''),
+	// 		path: a.pathname.replace(/^([^\/])/,'/$1'),
+	// 		relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [,''])[1],
+	// 		segments: a.pathname.replace(/^\//,'').split('/')
+	// 	};
+	// }
+	// //通用函数结束  /////////////
+
+
+
+	// //页面统计代码 开始  //////////////////////////////
+	// var phase = '';  //网页所属部分，如果一个网站想分成几个部分来统计可以使用此变量区分
+
+	// //hmsr代表媒体的种类，share代表分享的层级
+
+	// //解析url
+	// var hmsr,share;
+	// var myURL = parseURL(location.href);
+	// hmsr = myURL.params.hmsr;
+	// share = parseInt(myURL.params.share,10);
+	// if(!isNaN(share)){
+	// 	share++;
+	// }
+
+	// //读取cookie
+	// if(!hmsr){
+	// 	hmsr = Cookies.get('hmsr')?Cookies.get('hmsr'):0;
+	// }
+	// if(!share){
+	// 	share = Cookies.get('share')?parseInt(Cookies.get('share'),10):1;
+	// }
+
+
+	// //保存cookie，设置为当前目录当天有效
+	// Cookies.set('hmsr', hmsr, { expires: 1, path: '' });
+	// Cookies.set('share', share, { expires: 1, path: '' });
+
+	// //生成监测的前缀
+	// var media = phase+'_media_'+hmsr+'_';
+
+	// //改变分享的链接
+	// shareData.link = shareData2.link ='http://www.philips-campaign.com/shaver1602/shiyong.html?hmsr='+hmsr+'&share='+share;
+	// //监测分享完成
+	// shareData.success = shareData2.success = function (res) {
+	// 	trackBaidu(media+'分享完成');
+	// }
+
+
+
+
+
+
+
+
+
+	var data1 = {};
+	
+	data1.sex=1;
+	$('.sex_box i').click(function(){
+		$('.sex_box i').removeClass('active');
+		$(this).addClass('active');
+		data1.sex = $(this).index();
+	})
+
+	$('.sixs_box i').click(function(){
+		$('.sixs_box i').removeClass('active');
+		$(this).addClass('active');
+		data1.iphone = $(this).index();
+	})
+
+	$('.dao_box i').click(function(){
+		$('.dao_box i').removeClass('active');
+		$(this).addClass('active');
+		data1.use_shaver = $(this).index();
+	})
+
+	$('.pifu_box i').click(function(){
+		$('.pifu_box i').removeClass('active');
+		$(this).addClass('active');
+		data1.skin_care = $(this).index();
+	})
+
+	$('.age_box i').click(function(){
+		$('.age_box i').removeClass('active');
+		$(this).addClass('active');
+		data1.age = $(this).index();
+	})
+	$('.chengshi_box i').click(function(){
+		$('.chengshi_box i').removeClass('active');
+		$(this).addClass('active');
+		data1.city = $(this).index();
+	})
+	var scrT = 0;
+
+	$('.mian_word').click(function(){
+		scrT = document.body.scrollTop;
+		$('.header').hide();
+		$('.shengming').show();
+		$('.content').hide();
+		document.body.scrollTop = 0;
+	})
+
+	$('.back_btn').click(function(){
+		$('.header').show();
+		$('.shengming').hide();
+		$('.content').show();
+		document.body.scrollTop = scrT;
+	})
+	$('.gou').click(function(){
+		if($(this).hasClass('cur')){
+			$(this).removeClass('cur');
+		}else{
+			$(this).addClass('cur');
+		}
+	})
+
+
+	$('.zhan').click(function(){
+
+		if($('.kong').is(":visible")){
+			$('.kong').hide();
+			$('.list').show();
+
+			return false;
+		}else if($('.list')){
+			$('.kong').show();
+			$('.list').hide();
+		}
+	})
+
+
+	$('.weibo_lian').click(function(){
+		location.href = 'http://weibo.com/u/1708272353';
+	})
+
+	$('.zhongwen').click(function(){
+		location.href = 'http://www.philips.com.cn/';
+	})
+
+	$('.li_1').click(function(){
+		location.href = 'http://www.philips.com.cn';
+	})
+
+	$('.li_2').click(function(){
+		location.href = 'http://www.philips.com.cn/c-m/consumer-products';
+	})
+
+	$('.li_3').click(function(){
+		location.href = 'http://www.philips.co.uk';
+	})
+
+	$('.li_4').click(function(){
+		location.href = 'http://www.philips.co.uk';
+	})
+
+	$('.q1').click(function(){
+		location.href = 'http://www.philips.com/a-w/about/investor.html';
+	})
+
+	$('.q2').click(function(){
+		location.href = 'http://www.philips.com.cn/a-w/careers.html';
+	})
+
+	$('.q3').click(function(){
+		location.href = 'http://www.philips.com.cn/c-w/support-home/support-contact-page.html';
+	})
+
+	$('.q4').click(function(){
+		location.href = 'http://www.philips.com.cn/a-w/site-owner.html';
+	})
+
+	$('.q5').click(function(){
+		location.href = 'http://www.philips.com.cn/a-w/privacy-notice.html';
+	})
+
+	$('.q6').click(function(){
+		location.href = 'http://www.philips.com.cn/a-w/terms-of-use.html';
+	})
+
+	$('.q7').click(function(){
+		location.href = 'http://www.philips.com.cn/a-w/security/responsible-disclosure-statement.html';
+	})
+
+	$('.q8').click(function(){
+		location.href = 'http://www.sitemap.philips.com/sitemap/cn_zh/';
+	})
+
+	$('.q9').click(function(){
+		location.href = 'http://www.sitemap.philips.com/sitemap/cn_zh/';
+	})
+
+	$('.sub_btn').click(function(){
+
+
+		if(!chkName()){
+			Utils.showTip('姓名不能为空或不能大于30个字符')
+			return;
+		}
+
+		data1.username = $('.name_ipt').val();
+
+		if(!chkMobile()){
+			Utils.showTip('请输入正确的电话号码')
+			return;
+		}
+		data1.tel = $('.moblie_ipt').val();
+
+		if(!$('.sex_box i').hasClass('active')){
+			Utils.showTip('请回答第一题')
+			return;
+		}
+
+		if(!$('.sixs_box i').hasClass('active')){
+			Utils.showTip('请回答第二题')
+			return;
+		}
+
+		if(!$('.dao_box i').hasClass('active')){
+			Utils.showTip('请回答第三题')
+			return;
+		}
+
+		if(!$('.pifu_box i').hasClass('active')){
+			Utils.showTip('请回答第四题')
+			return;
+		}
+
+		if(!$('.age_box i').hasClass('active')){
+			Utils.showTip('请回答第五题')
+			return;
+		}
+
+		if(!$('.chengshi_box i').hasClass('active')){
+			Utils.showTip('请回答第六题')
+			return;
+		}
+
+		if(!$('.gou').hasClass('cur')){
+			Utils.showTip('请同意免责声明');
+			return;
+		}
+		location.href = 'chenggong.html';
+// 		$.ajax({
+// 			url:'api/saveinfo.php',
+// 			dataType:'json',
+// 			type:'post',
+// 			data: data1
+// //				username: data1.username,
+// //				tel: data1.tel,
+// //				sex:data1.sex,
+// //				iphone:data1.iphone,
+// //				use_shaver:data1.use_shaver,
+// //				skin_care:data1.skin_care,
+// //				age:data1.age,
+// //				city:data1.city
+// 		}).done(function(data){
+// 			if(data.result==1){
+// 				trackBaiduEvent(media,'提交问卷');
+// 				location.href = 'chenggong.html?hmsr='+hmsr;
+// 			}else if(data.result==-1){
+// 				Utils.showTip('抱歉!该手机号码已经注册过');
+// 			}else if(data.result==0){
+// 				Utils.showTip('姓名为空或多于30字或手机格式不对。');
+// 			}
+// 		})
+
+	})
+
+	function chkName(){
+		var len = $('.name_ipt').val().length;
+		if(len<=0||len>30){
+			return false;
+		}
+		return true;
+	}
+
+	function chkMobile(){
+		var re = /^1[3-8]\d{9}$/i;
+		if(!re.test($('.moblie_ipt').val())){
+			return false;
+		}
+		return true;
+	}
+
+	;(function(window,document,$){
+		window.Utils = window.Utils || {};
+
+		var tip = null;
+		var box = null;
+		var tipTimer = null;
+		window.Utils.showTip = function(text,opts){
+			var defaults = {
+				seconds : 1000,
+				backgroundColor:'#000',
+				color:'#fff',
+				fontSize : '24px',
+				fontWeight: 'bold',
+				fontFamily : '微软雅黑',
+				width : 'auto',
+				height : 'auto',
+				padding : '10px 30px 10px 30px',
+				borderRadius : '6px',
+				position : 'fixed',
+				zIndex : '99998',
+				opacity :0.7,
+				textAlign : 'center',
+				lineHeight : '180%'
+			};
+			$.extend( defaults, opts);
+			if(!tip){
+				tip = document.createElement('div');
+				document.body.appendChild(tip);
+				tip.style.backgroundColor = defaults.backgroundColor;
+				tip.style.color = defaults.color;
+				tip.style.fontSize = defaults.fontSize;
+				tip.style.fontWeight = defaults.fontWeight;
+				tip.style.fontFamily = defaults.fontFamily;
+				tip.style.width = defaults.width;
+				tip.style.height = defaults.height;
+				tip.style.padding = defaults.padding;
+				tip.style.borderRadius = defaults.borderRadius;
+				tip.style.position = defaults.position;
+				tip.style.opacity  = defaults.opacity;
+				tip.style.zIndex = defaults.zIndex;
+				tip.style.textAlign = defaults.textAlign;
+				tip.style.lineHeight = defaults.lineHeight;
+				box = document.createElement('div');
+				document.body.appendChild(box);
+				box.style.background = '#fff';
+				box.style.width = '100%';
+				box.style.height = '100%';
+				box.style.opacity  = '0';
+				box.style.zIndex = '99999';
+				box.style.position = 'absolute';
+				box.style.left = '0';
+				box.style.top = '0';
+			}
+			if(!box){
+
+			}
+
+			tip.innerHTML = text;
+			tip.style.display = 'inline-block';
+			//tip.className = 'tip';
+
+			tip.style.top = (document.documentElement.clientHeight/2 - tip.offsetHeight/2) + 'px';
+			tip.style.left = (document.documentElement.clientWidth/2 - tip.offsetWidth/2) + 'px';
+			$(tip).fadeIn(0);
+			$(box).fadeIn(0)
+
+			if(tipTimer) clearTimeout(tipTimer);
+			tipTimer = setTimeout(function(){
+				$(tip).fadeOut(500);
+				$(box).fadeOut(500);
+			},defaults.seconds);
+
+		}
+
+	})(window,document,$);
+
+
+})
+</script>
+</body>
+</html>
